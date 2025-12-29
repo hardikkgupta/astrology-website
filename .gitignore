@@ -1,0 +1,31 @@
+# Node / Next.js / TypeScript
+node_modules
+.next
+.turbo
+dist
+out
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Env
+.env*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+# Test / coverage
+coverage
+
+# Logs
+*.log
+*.tmp
+
+# Build artifacts
+*.tsbuildinfo
+
