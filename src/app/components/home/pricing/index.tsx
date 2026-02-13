@@ -33,8 +33,8 @@ const [pricingData, setPricingData] = useState<any>(null);
                     <div className="flex flex-col gap-20">
                         <div className="flex flex-col gap-14 xl:gap-24">
                             <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                                <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                                    <span className="bg-primary dark:text-secondary py-1.5 px-2.5 text-base font-medium rounded-full">07</span>
+                            <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
+                                    <span className="bg-primary text-white py-1.5 px-2.5 text-base font-medium rounded-full">07</span>
                                     <div className="h-px w-16 bg-black/12 dark:bg-white/12" />
                                     <p className="section-bedge py-1.5 px-4 rounded-full">Pricing</p>
                                 </div>
@@ -91,7 +91,7 @@ const [pricingData, setPricingData] = useState<any>(null);
                                             </div>
                                             <div>
                                                 <Link href="/" className="group relative flex justify-center items-center w-full bg-primary hover:bg-secondary rounded-full transition-all duration-300 ease-in-out">
-                                                    <span className="py-4 px-2 text-lg font-bold text-secondary group-hover:text-white transition-all duration-300 ease-in-out">Subscribe now</span>
+                                                    <span className="py-4 px-2 text-lg font-bold text-white/90 group-hover:text-white group-hover:translate-x-6 transform transition-all duration-300 ease-in-out">Subscribe now</span>
                                                     <div className="absolute top-0.5 right-0.5 transition-all duration-300 ease-in-out group-hover:left-0">
                                                         <svg className="flex items-center transition-transform duration-300 ease-in-out group-hover:rotate-45" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <g filter="url(#filter0_d_1_873)">

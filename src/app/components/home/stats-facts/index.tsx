@@ -39,7 +39,7 @@ function StatsFacts() {
                 <div className="container">
                     <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
                         <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                            <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full dark:text-secondary">{statsFactData && statsFactData?.number}</span>
+                            <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full text-white">{statsFactData && statsFactData?.number}</span>
                             <div className="h-px w-16 bg-black/12 dark:bg-white/12" />
                             <p className="section-bedge py-1.5 px-4 rounded-full">{statsFactData && statsFactData?.name}</p>
                         </div>

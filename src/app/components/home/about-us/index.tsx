@@ -25,7 +25,7 @@ function Aboutus() {
                 <div className="flex flex-col 2xl:flex-row gap-10 2xl:gap-28">
                     <div className="flex flex-col gap-5 2xl:gap-7 w-full 2xl:max-w-2xl 2xl:w-full">
                         <div className="flex items-center gap-4 md:gap-8">
-                            <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full dark:text-secondary">
+                            <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full text-white">
                                 04
                             </span>
                             <div className="h-px w-16 bg-secondary/12 dark:bg-white/12"/>
@@ -42,20 +42,20 @@ function Aboutus() {
                         <div className="relative bg-primary p-4 2xl:p-7 flex flex-col justify-between gap-8 md:gap-0">
                             <div className="relative z-10 flex flex-col gap-2 lg:gap-4">
                                 <div>
-                                    <StarRating count={4} color='#1F2A2E' />
+                                    <StarRating count={4} color='#FFFFFF' />
                                 </div>
-                                <p className="dark:text-secondary">The team exceeded our expectations with a stunning brand identity.</p>
+                                <p className="text-white/90">The team exceeded our expectations with a stunning brand identity.</p>
                             </div>
                             <div className="relative z-10">
                                 <div className="relative border-b border-secondary/12 pb-5">
-                                    <h2 className="dark:text-secondary">98.6%</h2>
-                                    <p className="text-base text-secondary/70">Customer satisfaction</p>
+                                    <h2 className="text-white">98.6%</h2>
+                                    <p className="text-base text-white/70">Customer satisfaction</p>
                                 </div>
                                 <div className="flex items-center gap-2 lg:gap-5 pt-5">
                                     <Image src={"/images/home/aboutusIndex/avatar.svg"} alt="Image" width={64} height={64} />
                                     <div>
-                                        <p className="font-medium dark:text-secondary">Wade Warren</p>
-                                        <p className="text-base text-secondary/70">Bank of America</p>
+                                        <p className="font-medium text-white">Wade Warren</p>
+                                        <p className="text-base text-white/70">Bank of America</p>
                                     </div>
                                 </div>
                             </div>

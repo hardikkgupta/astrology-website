@@ -27,7 +27,7 @@ function Testimonial() {
                     <div className="flex flex-col gap-14 xl:gap-24">
                         <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
                             <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                                <span className="bg-primary dark:text-secondary py-1.5 px-2.5 text-base font-medium rounded-full">05</span>
+                                <span className="bg-primary text-white py-1.5 px-2.5 text-base font-medium rounded-full">05</span>
                                 <div className="h-px w-16 bg-black/12 dark:bg-white/12"/>
                                 <p className="section-bedge py-1.5 px-4 rounded-full">Testimonial</p>
                             </div>
@@ -41,14 +41,14 @@ function Testimonial() {
                         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
                             <div className="bg-primary p-4 lg:p-7 flex flex-col gap-32">
                                 <div className="flex flex-col gap-6">
-                                    <p className="text-base text-secondary/70">{testimonialData?.data_1?.preTitle}</p>
-                                    <h4 className="dark:text-secondary">{testimonialData?.data_1?.title}</h4>
+                                    <p className="text-base text-white/70">{testimonialData?.data_1?.preTitle}</p>
+                                    <h4 className="text-white">{testimonialData?.data_1?.title}</h4>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <Image src={"/images/testimonial/testimonial_1.png"} alt="Image" width={60} height={60} className="rounded-full" />
                                     <div>
-                                        <p className="dark:text-secondary">{testimonialData?.data_1?.author}</p>
-                                        <p className="text-secondary/70 text-base font-normal">{testimonialData?.data_1?.company}</p>
+                                        <p className="text-white">{testimonialData?.data_1?.author}</p>
+                                        <p className="text-white/70 text-base font-normal">{testimonialData?.data_1?.company}</p>
                                     </div>
                                 </div>
                             </div>

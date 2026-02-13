@@ -34,7 +34,7 @@ const AboutusFullimg = () => {
                 {servicesData?.map((value:any, index:any) => {
                     return (
                         <div key={index} className="flex items-center py-6 gap-6 pr-6 md:pr-10 md:gap-10">
-                            <h4 className="dark:text-secondary">{value}</h4>
+                            <h4 className="text-white">{value}</h4>
                             <div className="w-2.5 h-2.5 bg-secondary/12  rounded-full" />
                         </div>
                     )

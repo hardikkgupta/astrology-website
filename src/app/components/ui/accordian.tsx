@@ -28,14 +28,14 @@ const AccordionTrigger = React.forwardRef<
         <AccordionPrimitive.Trigger
             ref={ref}
             className={cn(
-                "flex cursor-pointer flex-1 items-center justify-between py-5 lg:py-7 text-sm font-medium transition-all text-left [&[data-state=open]>#plusicon]:rotate-45 [&[data-state=open]>#plusicon]:bg-primary",
+                "flex cursor-pointer flex-1 items-center justify-between py-5 lg:py-7 text-sm font-medium transition-all text-left [&[data-state=open]>#plusicon]:rotate-45 [&[data-state=open]>#plusicon]:bg-primary [&[data-state=open]>#plusicon>svg]:text-white",
                 className
             )}
             {...props}
         >
             {children}
             <div id="plusicon" className=" bg-secondary/12 dark:bg-white/50 p-2 md:p-3 rounded-full transition-transform duration-200 ">
-                <Plus className="h-5 w-5 shrink-0 text-muted-foreground" style={{color:'#000'}} />
+                <Plus className="h-5 w-5 shrink-0 text-secondary" />
             </div>
         </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

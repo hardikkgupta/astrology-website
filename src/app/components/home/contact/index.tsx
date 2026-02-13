@@ -29,32 +29,46 @@ const Contact = (props: { contactdataNumber: string }) => {
         fetchData()
     }, [])
     const reset = () => {
-        formData.name = "";
-        formData.email = "";
-        formData.message = "";
+        setFormData({
+            name: "",
+            email: "",
+            message: "",
+        });
     };
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+        setSubmitted(false);
         setLoader(true);
 
-        fetch("https://formsubmit.co/ajax/niravjoshi87@gmail.com", {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                message: formData.message,
-            }),
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setSubmitted(data.success);
-                setLoader(false);
-                reset();
-            })
-            .catch((error) => {
-                console.log(error.message);
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                }),
             });
+
+            const data = await response.json();
+            console.log("Contact submit result:", {
+                success: data?.success,
+                emailSent: data?.emailSent,
+                telegramSent: data?.telegramSent,
+                telegramReason: data?.telegramReason,
+            });
+            setSubmitted(Boolean(data?.success));
+
+            if (data?.success) {
+                reset();
+            }
+        } catch (error: any) {
+            console.log(error?.message || "Contact form submission failed");
+            setSubmitted(false);
+        } finally {
+            setLoader(false);
+        }
     };
     const handleChange = (e: any) => {
         const { name, value } = e.target;
@@ -72,7 +86,7 @@ const Contact = (props: { contactdataNumber: string }) => {
                     <div className="flex flex-col gap-14 xl:gap-24">
                         <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
                             <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                                <span className="bg-primary dark:text-secondary py-1.5 px-2.5 text-base font-medium rounded-full">{contactdataNumber ? contactdataNumber : 10}</span>
+                                <span className="bg-primary text-white py-1.5 px-2.5 text-base font-medium rounded-full">{contactdataNumber ? contactdataNumber : 10}</span>
                                 <div className="h-px w-16 bg-black/12 dark:bg-white/12" />
                                 <p className="section-bedge py-1.5 px-4 rounded-full">Contact us</p>
                             </div>
@@ -152,13 +166,13 @@ const Contact = (props: { contactdataNumber: string }) => {
                                         <div className="bg-primary w-fit p-1 sm:p-1.5 rounded-full flex-shrink-0">
                                             <Image src={"/images/Icon/right-check.svg"} alt="right-icon" width={20} height={20} />
                                         </div>
-                                        <p className="text-secondary">Great!!! Email has been Successfully Sent. We will get in touch asap.</p>
+                                        <p className="text-secondary">Great!!! Message has been sent successfully. We will get in touch asap.</p>
                                     </div>
                                 )}
                                 <div>
                                     {!loader ? (
                                         <button type="submit" className="group relative flex justify-center items-center w-full bg-primary hover:bg-secondary rounded-full transition-all duration-300 ease-in-out cursor-pointer">
-                                            <span className="py-4 px-2 text-lg font-bold text-secondary group-hover:text-white transition-all duration-300 ease-in-out">Submit message</span>
+                                            <span className="py-4 px-2 text-lg font-bold text-white/90 group-hover:text-white group-hover:translate-x-6 transform transition-all duration-300 ease-in-out">Submit message</span>
                                             <div className="absolute top-0.5 right-0.5 transition-all duration-300 ease-in-out group-hover:left-0">
                                                 <svg className="flex items-center transition-transform duration-300 ease-in-out group-hover:rotate-45" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g filter="url(#filter0_d_1_873)">

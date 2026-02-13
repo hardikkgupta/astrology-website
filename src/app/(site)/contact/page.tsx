@@ -2,7 +2,7 @@ import Contact from "@/app/components/home/contact";
 import Herobanner from "@/app/components/shared/hero-banner";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Contact | Studiova",
+    title: "Contact | Stambh AstroVastu",
 };
 
 export default function Page() {

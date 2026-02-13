@@ -19,29 +19,23 @@ const MenuData = [
     path: "/#services",
     newTab: false,
   },
-  {
-    id: 4,
-    title: "Contact",
-    path: "/contact",
-    newTab: false,
-  },
   
 ];
 
 
 const footerData = {
-    name: "Studiova",
+    name: "Stambh AstroVastu",
     tagline: "Build something together?",
     info: [
         {
             icon: "/images/footer/email-arrow.svg",
-            link: "info@wrappixel.com",
-            href: "https://www.wrappixel.com/"
+            link: "Get an Appointment!",
+            href: "contact"
         },
         {
             icon: "/images/footer/Location.svg",
-            link: "Zwolle Netherlands",
-            href: "https://maps.app.goo.gl/hpDp81fqzGt5y4bC8"
+            link: "Stambh AstroVastu",
+            href: "https://maps.app.goo.gl/Bjx3adTq3DKvwrzE7"
         }
     ],
     links: [
@@ -53,11 +47,11 @@ const footerData = {
         { name: "Error 404", href: "/not-found" }
     ],
     socialLinks: [
-        { name: "Facebook", href: "https://www.facebook.com/" },
-        { name: "Instagram", href: "https://www.instagram.com/" },
-        { name: "Twitter", href: "https://x.com/" }
+        { name: "Facebook", href: "https://www.facebook.com/profile.php?id=100064116277664" },
+        { name: "Instagram", href: "https://www.instagram.com/stambhastrovastu/" },
+        { name: "Youtube", href: "https://www.youtube.com/@StambhAstroVastu" }
     ],
-    copyright: "© Studiova copyright 2025"
+    copyright: "© Stambh AstroVastu copyright 2025"
 };
 
 export const GET = async () => {
