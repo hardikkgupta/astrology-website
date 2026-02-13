@@ -8,16 +8,16 @@ const sanitizeInput = (value: unknown) => {
     return value.trim();
 };
 
-const buildTelegramMessage = (name: string, email: string, message: string) => {
+const buildTelegramMessage = (name: string, phone: string, message: string) => {
     return [
         "New contact form submission",
         `Name: ${name}`,
-        `Email: ${email}`,
+        `Phone: ${phone}`,
         `Message: ${message}`,
     ].join("\n");
 };
 
-const sendTelegram = async (name: string, email: string, message: string) => {
+const sendTelegram = async (name: string, phone: string, message: string) => {
     if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
         return { sent: false, reason: "missing_configuration" };
     }
@@ -29,7 +29,7 @@ const sendTelegram = async (name: string, email: string, message: string) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 chat_id: TELEGRAM_CHAT_ID,
-                text: buildTelegramMessage(name, email, message),
+                text: buildTelegramMessage(name, phone, message),
             }),
             cache: "no-store",
         }
@@ -47,9 +47,9 @@ const sendTelegram = async (name: string, email: string, message: string) => {
     };
 };
 
-const sendTelegramSafe = async (name: string, email: string, message: string) => {
+const sendTelegramSafe = async (name: string, phone: string, message: string) => {
     try {
-        return await sendTelegram(name, email, message);
+        return await sendTelegram(name, phone, message);
     } catch (error) {
         console.error("Telegram notification failed:", error);
         return { sent: false, reason: "request_failed" as const };
@@ -60,17 +60,17 @@ export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
         const name = sanitizeInput(body?.name);
-        const email = sanitizeInput(body?.email);
+        const phone = sanitizeInput(body?.phone);
         const message = sanitizeInput(body?.message);
 
-        if (!name || !email || !message) {
+        if (!name || !phone || !message) {
             return NextResponse.json(
                 { success: false, message: "Please fill all required fields." },
                 { status: 400 }
             );
         }
 
-        const telegramResult = await sendTelegramSafe(name, email, message);
+        const telegramResult = await sendTelegramSafe(name, phone, message);
         const telegramSent = Boolean(telegramResult?.sent);
 
         return NextResponse.json({

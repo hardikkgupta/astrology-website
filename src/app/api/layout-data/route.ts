@@ -33,6 +33,11 @@ const footerData = {
             href: "contact"
         },
         {
+            icon: "/images/footer/phone.svg",
+            link: "+91-9045089133",
+            href: "tel:+919045089133"
+        },
+        {
             icon: "/images/footer/Location.svg",
             link: "Stambh AstroVastu",
             href: "https://maps.app.goo.gl/Bjx3adTq3DKvwrzE7"
@@ -51,7 +56,7 @@ const footerData = {
         { name: "Instagram", href: "https://www.instagram.com/stambhastrovastu/" },
         { name: "Youtube", href: "https://www.youtube.com/@StambhAstroVastu" }
     ],
-    copyright: "© Stambh AstroVastu copyright 2025"
+    copyright: "© Stambh AstroVastu copyright 2026"
 };
 
 export const GET = async () => {

@@ -11,7 +11,7 @@ const Contact = (props: { contactdataNumber: string }) => {
     const [contactData, setContactData] = useState<any>(null);
     const [formData, setFormData] = useState({
         name: "",
-        email: "",
+        phone: "",
         message: ""
     });
 
@@ -31,7 +31,7 @@ const Contact = (props: { contactdataNumber: string }) => {
     const reset = () => {
         setFormData({
             name: "",
-            email: "",
+            phone: "",
             message: "",
         });
     };
@@ -46,7 +46,7 @@ const Contact = (props: { contactdataNumber: string }) => {
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({
                     name: formData.name,
-                    email: formData.email,
+                    phone: formData.phone,
                     message: formData.message,
                 }),
             });
@@ -54,7 +54,6 @@ const Contact = (props: { contactdataNumber: string }) => {
             const data = await response.json();
             console.log("Contact submit result:", {
                 success: data?.success,
-                emailSent: data?.emailSent,
                 telegramSent: data?.telegramSent,
                 telegramReason: data?.telegramReason,
             });
@@ -72,9 +71,10 @@ const Contact = (props: { contactdataNumber: string }) => {
     };
     const handleChange = (e: any) => {
         const { name, value } = e.target;
+        const nextValue = name === "phone" ? value.replace(/\D/g, "") : value;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value
+            [name]: nextValue
         }));
     };
 
@@ -143,12 +143,14 @@ const Contact = (props: { contactdataNumber: string }) => {
                                     <input
                                         required
                                         className="w-full border-b border-secondary dark:border-white/20 focus:border-black dark:focus:border-white focus:outline-none py-3.5"
-                                        id="email"
-                                        type="text"
-                                        name="email"
-                                        value={formData.email}
+                                        id="phone"
+                                        type="tel"
+                                        inputMode="numeric"
+                                        pattern="[0-9]*"
+                                        name="phone"
+                                        value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="Email"
+                                        placeholder="Phone number"
                                     />
                                 </div>
                                 <div>
@@ -158,7 +160,7 @@ const Contact = (props: { contactdataNumber: string }) => {
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        placeholder="Tell us about your project"
+                                        placeholder="Tell us about yourself"
                                         rows={4} />
                                 </div>
                                 {submitted && (
