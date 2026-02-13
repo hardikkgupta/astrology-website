@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const FORM_SUBMIT_EMAIL =
-    process.env.FORM_SUBMIT_EMAIL || "stambh.vastu@gmail.com";
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
@@ -17,29 +15,6 @@ const buildTelegramMessage = (name: string, email: string, message: string) => {
         `Email: ${email}`,
         `Message: ${message}`,
     ].join("\n");
-};
-
-const sendEmail = async (name: string, email: string, message: string) => {
-    const response = await fetch(`https://formsubmit.co/ajax/${FORM_SUBMIT_EMAIL}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-        cache: "no-store",
-    });
-
-    const rawText = await response.text();
-    let parsed: any = null;
-    try {
-        parsed = rawText ? JSON.parse(rawText) : null;
-    } catch {
-        parsed = { raw: rawText };
-    }
-
-    if (!response.ok) {
-        throw new Error(`Email notification failed: ${rawText}`);
-    }
-
-    return parsed;
 };
 
 const sendTelegram = async (name: string, email: string, message: string) => {
@@ -72,6 +47,15 @@ const sendTelegram = async (name: string, email: string, message: string) => {
     };
 };
 
+const sendTelegramSafe = async (name: string, email: string, message: string) => {
+    try {
+        return await sendTelegram(name, email, message);
+    } catch (error) {
+        console.error("Telegram notification failed:", error);
+        return { sent: false, reason: "request_failed" as const };
+    }
+};
+
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
@@ -86,25 +70,13 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const emailResult = await sendEmail(name, email, message);
-        const emailSent = Boolean(emailResult?.success ?? true);
-        let telegramSent = false;
-        let telegramReason: string | null = null;
-
-        try {
-            const telegramResult = await sendTelegram(name, email, message);
-            telegramSent = Boolean(telegramResult?.sent);
-            telegramReason = telegramResult?.reason || null;
-        } catch (telegramError) {
-            console.error("Telegram notification failed:", telegramError);
-            telegramReason = "request_failed";
-        }
+        const telegramResult = await sendTelegramSafe(name, email, message);
+        const telegramSent = Boolean(telegramResult?.sent);
 
         return NextResponse.json({
-            success: emailSent,
-            emailSent,
+            success: telegramSent,
             telegramSent,
-            telegramReason,
+            telegramReason: telegramResult?.reason || null,
         });
     } catch (error) {
         console.error("Contact API error:", error);
