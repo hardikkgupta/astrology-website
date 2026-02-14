@@ -36,8 +36,7 @@ function HeroSection() {
                                     />
                                 </div>
                                 <p className="text-white/70 max-w-md">
-                                    We create <span className="text-primary">high-performing</span> digital designs
-                                    that elevate brands and enhance conversions.
+                                    We provide <span className="text-primary">clear cosmic guidance</span> that aligns your path and creates real success.
                                 </p>
                             </div>
                             <div className="flex flex-col lg:flex-row items-start lg:items-end gap-4">

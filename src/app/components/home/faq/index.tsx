@@ -36,7 +36,7 @@ function Faq() {
                                 <div className="flex flex-col gap-11">
                                     <div className="flex flex-col gap-5 ">
                                         <h2 className="max-w-3xl">Frequently asked questions</h2>
-                                        <p className="max-w-2xl text-secondary/70 dark:text-white/70">Discover how we tailor our solutions to meet unique needs, delivering impactful strategies, personalized branding, and exceptional customer experiences.</p>
+                                        <p className="max-w-2xl text-secondary/70 dark:text-white/70">We don’t just read the stars; we align them to your ambition. Bespoke strategies for building a life without limits.</p>
                                     </div>
                                 </div>
                             </div>

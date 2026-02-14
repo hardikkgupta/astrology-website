@@ -25,7 +25,7 @@ const MenuData = [
 
 const footerData = {
     name: "Stambh AstroVastu",
-    tagline: "Build something together?",
+    tagline: "Ready to write your Destiny?",
     info: [
         {
             icon: "/images/footer/email-arrow.svg",
@@ -47,9 +47,9 @@ const footerData = {
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Services", href: "/#services" },
-        { name: "Terms", href: "/terms-and-conditions" },
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Error 404", href: "/not-found" }
+        // { name: "Terms", href: "/terms-and-conditions" },
+        // { name: "Privacy Policy", href: "/privacy-policy" },
+        // { name: "Error 404", href: "/not-found" }
     ],
     socialLinks: [
         { name: "Facebook", href: "https://www.facebook.com/profile.php?id=100064116277664" },
