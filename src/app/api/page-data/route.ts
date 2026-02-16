@@ -26,18 +26,18 @@ const statsFactData = {
     description: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project.",
     scoreData: [
         {
-            number: 40,
-            numberValue: 'K',
-            scoreDescp: "People who have launched their websites"
+            number: 15,
+            numberValue: '',
+            scoreDescp: "years of experience"
         },
         {
-            number: 238,
-            scoreDescp: "Experienced professionals ready to assist"
+            number: 310,
+            scoreDescp: "cumulative number of homes and businesses harmonized",
         },
         {
-            number: 3,
-            numberValue: 'M',
-            scoreDescp: "Support through messages and live consultations"
+            number: 2,
+            numberValue: '',
+            scoreDescp: "weeks for the effects to begin showing in your life"
         },
     ]
 };
@@ -245,23 +245,23 @@ const contactData = {
 
 const aboutusStats = [
     {
-        number: 45,
-        postfix:"+",
-        title: 'Presence in global markets',
-        descp: "Expanding reach across international regions with localized expertise and worldwide impact."
-    },
-    {
         number: 15,
-        prefix: "$",
-        postfix: "M",
-        title: 'In strategic investments',
-        descp: "Driving growth with curated partnerships and high-performing, audience-driven initiatives."
+        postfix:"+",
+        title: 'Years of experience',
+        descp: "Focused on improving your health, relationships, and building stronger financial stability"
     },
     {
-        number: 158,
+        number: 310,
+        prefix: "",
         postfix: "+",
-        title: 'Trusted brand collaborations',
-        descp: "Shaping industry conversations through innovation, creativity, and lasting influence."
+        title: 'Cumulative homes and businesses harmonized',
+        descp: "Supporting a 16-directional focus to create overall harmony and foster joy and happiness"
+    },
+    {
+        number: 2,
+        postfix: "+",
+        title: 'Weeks for the effects to begin showing in your life',
+        descp: "By focusing on all 16 directions and applying non-destructive remedies, positive effects can begin to appear within 48 hours and continue developing over the next two weeks"
     },
 ]
 
