@@ -78,21 +78,21 @@ const servicesData = {
 const testimonialData = {
     data_1: {
         preTitle: "Hear from them",
-        title: "Our website redesign was flawless. They understood our vision perfectly!",
-        author: "Albert Flores",
-        company: "MasterCard"
+        title: "When I first reached out, I was uncertain, but the clarity of your analysis and remedies brought positive changes",
+        author: "Harshit Singh",
+        company: ""
     },
     data_2: {
         preTitle: "Hear from them",
-        title: "From concept to execution, they delivered outstanding results. Highly recommend their expertise!",
-        author: "Robert Fox",
-        company: "Mitsubishi"
+        title: "I consulted my daughter and she suggested me easy remedy which was available at home. She’s a great astrologer and a kind person. Her remedy worked like a magic",
+        author: "Harsha Chugani",
+        company: ""
     },
     data_3: {
         preTitle: "Hear from them",
-        title: "Super smooth process with incredible results. highly recommend!",
-        author: "Jenny Wilson",
-        company: "Pizza Hut"
+        title: "Her approach is refreshingly practical, she avoids focuses on simple, effective solutions that deliver real clarity",
+        author: "Rajan Bakshi",
+        company: ""
     },
 };
 
@@ -266,7 +266,7 @@ const aboutusStats = [
 ]
 
 const servicesSliderData = [
-    "Branding", "Web development", "Agency","Content creation","SaaS","Motion & 3d modeling","Photography"
+    "Astrology", "Vastu Shastra", "Tarot Card", "Palmistry", "Numerology", "Life Style Coach", "Counselling"
 ]
 
 

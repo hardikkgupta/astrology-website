@@ -57,8 +57,8 @@ function Testimonial() {
                                     <p className="text-base text-white/70">{testimonialData?.data_2?.preTitle}</p>
                                     <h4 className="text-white">{testimonialData?.data_2?.title}</h4>
                                     <div className="flex items-center gap-2.5">
-                                        <StarRating count={4.5} color='#FFFFFF' />
-                                        <span className="text-base text-white">4.5</span>
+                                        <StarRating count={5} color='#FFFFFF' />
+                                        <span className="text-base text-white">5.0</span>
                                     </div>
                                 </div>
                                 <div className="flex items-center justify-between">
