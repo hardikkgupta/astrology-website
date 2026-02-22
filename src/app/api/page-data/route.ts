@@ -46,31 +46,31 @@ const servicesData = {
     number: '03',
     name: "Services",
     heading: "What we do",
-    description: "A glimpse into our creativity—exploring innovative designs, successful collaborations, and transformative digital experiences.",
+    description: "Unlock and transform your life by understanding how celestial bodies influences your life",
     data: [
         {
             id: 1,
             image: "/images/home/services/services_1.png",
-            heading: "Brand identity",
-            descp: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project."
+            heading: "Astro Vastu Consultancy",
+            descp: "Optimize your energies and control your energies for happier, healthier and more prosperous life"
         },
         {
             id: 2,
             image: "/images/home/services/services_2.png",
-            heading: "Web development",
-            descp: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project."
+            heading: "Tarot Card",
+            descp: "Ask your questions, receive answers from the universe, and gain deep insights into your past, present, and future"
         },
         {
             id: 3,
             image: "/images/home/services/services_3.png",
-            heading: "Content creation",
-            descp: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project."
+            heading: "Birth Kundli",
+            descp: "Understand and amplify your strengths and reduce weakness to give yourself and people around you a happy, healthy and prosperous life"
         },
         {
             id: 4,
             image: "/images/home/services/services_4.png",
-            heading: "Motion & 3d modeling",
-            descp: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project."
+            heading: "Palmistry",
+            descp: "As they say, destiny is written in your hands. We will help you read it, understand it, amplify the good, and diminish the bad"
         },
     ]
 };
