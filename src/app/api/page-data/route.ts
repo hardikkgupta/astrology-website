@@ -22,8 +22,8 @@ const avatarList = [
 const statsFactData = {
     number: '01',
     name: "Stats & facts",
-    heading: "High quality web design solutions you can trust.",
-    description: "When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project.",
+    heading: "Authentic Guidance You Can Trust",
+    description: "When seeking advice in astrology, Vastu, or tarot, it's essential to consider the experience and empathy. With dedicated practice, I provide non-destructive, remedial, real-world solutions to help you navigate life's challenges",
     scoreData: [
         {
             number: 15,

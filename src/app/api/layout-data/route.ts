@@ -47,6 +47,10 @@ const footerData = {
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Services", href: "/#services" },
+        { name: "Astro Vastu Consultancy", href: "/contact" },
+        { name: "Tarot Card", href: "/contact" },
+        { name: "Birth Kundli", href: "/contact" },
+        { name: "Palmistry", href: "/contact" },
         // { name: "Terms", href: "/terms-and-conditions" },
         // { name: "Privacy Policy", href: "/privacy-policy" },
         // { name: "Error 404", href: "/not-found" }

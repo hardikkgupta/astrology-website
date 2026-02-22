@@ -34,7 +34,7 @@ function Testimonial() {
                             <div className="flex flex-col gap-11">
                                 <div className="flex flex-col gap-5 ">
                                     <h2 className="max-w-3xl">Stories from clients</h2>
-                                    <p className="max-w-2xl text-secondary/70 dark:text-white/70">Real experiences, genuine feedback—discover how our creative solutions have transformed brands and elevated businesses.</p>
+                                    <p className="max-w-2xl text-secondary/70 dark:text-white/70">Real journeys of people who found clarity and peace through the stars.</p>
                                 </div>
                             </div>
                         </div>

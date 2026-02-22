@@ -11,7 +11,7 @@ export default function Page() {
             <Herobanner
                 bannerimage="/images/contact/banner/contact-banner.jpg"
                 heading="Contact"
-                desc="Ready to <span>start something</span> great? Reach out  we’d love to hear from you." />
+                desc="Ready to <span>change</span> your future? Reach out to us we’d love to hear from you." />
             <Contact contactdataNumber="01"/>
         </main>
     );
