@@ -42,17 +42,17 @@ function Aboutus() {
                         <div className="relative bg-primary p-4 2xl:p-7 flex flex-col justify-between gap-8 md:gap-0">
                             <div className="relative z-10 flex flex-col gap-2 lg:gap-4">
                                 <div>
-                                    <StarRating count={4} color='#FFFFFF' />
+                                    <StarRating count={5} color='#FFFFFF' />
                                 </div>
                                 <p className="text-white/90">The team exceeded our expectations with a stunning brand identity.</p>
                             </div>
                             <div className="relative z-10">
                                 <div className="relative border-b border-secondary/12 pb-5">
-                                    <h2 className="text-white">98.6%</h2>
+                                    <h2 className="text-white">99.0%</h2>
                                     <p className="text-base text-white/70">Customer satisfaction</p>
                                 </div>
                                 <div className="flex items-center gap-2 lg:gap-5 pt-5">
-                                    <Image src={"/images/home/aboutusIndex/avatar.svg"} alt="Image" width={64} height={64} />
+                                    <Image src={"/images/home/aboutusIndex/avatar.png"} alt="Image" width={64} height={64} />
                                     <div>
                                         <p className="font-medium text-white">Wade Warren</p>
                                         <p className="text-base text-white/70">Bank of America</p>
