@@ -55,7 +55,7 @@ function Aboutus() {
                                     <Image src={"/images/home/aboutusIndex/avatar.png"} alt="Image" width={64} height={64} />
                                     <div>
                                         <p className="font-medium text-white">Deepali Gupta</p>
-                                        <p className="text-base text-white/70">Bank of America</p>
+                                        <p className="text-base text-white/70"></p>
                                     </div>
                                 </div>
                             </div>
