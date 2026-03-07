@@ -35,7 +35,7 @@ function Aboutus() {
                         </div>
                         <div className="flex flex-col gap-5 2xl:gap-7">
                             <h2 className="2xl:max-w-3xl text-secondary dark:text-white">Why choose us</h2>
-                            <p className="2xl:max-w-sm text-secondary/70 dark:text-white/70">We blend creativity with strategy to craft unique digital experiences that make an impact. With a focus on innovation, attention to details.</p>
+                            <p className="2xl:max-w-sm text-secondary/70 dark:text-white/70">We blend ancient Vedic sciences with intuitive practice to offer clarity and direction. With a focus on precision, empathy, and real-world remedies that transform lives.</p>
                         </div>
                     </div>
                     <div className="grid md:grid-cols-3 gap-5 2xl:gap-7">
@@ -44,7 +44,7 @@ function Aboutus() {
                                 <div>
                                     <StarRating count={5} color='#FFFFFF' />
                                 </div>
-                                <p className="text-white/90">The team exceeded our expectations with a stunning brand identity.</p>
+                                <p className="text-white/90">Her suggestions were practical, easy to implement, and truly positive. We genuinely felt a shift in the energy after making the changes.</p>
                             </div>
                             <div className="relative z-10">
                                 <div className="relative border-b border-secondary/12 pb-5">
@@ -54,7 +54,7 @@ function Aboutus() {
                                 <div className="flex items-center gap-2 lg:gap-5 pt-5">
                                     <Image src={"/images/home/aboutusIndex/avatar.png"} alt="Image" width={64} height={64} />
                                     <div>
-                                        <p className="font-medium text-white">Wade Warren</p>
+                                        <p className="font-medium text-white">Deepali Gupta</p>
                                         <p className="text-base text-white/70">Bank of America</p>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ function Aboutus() {
                             </div>
                             <div className="bg-secondary dark:bg-lightgray/10 p-5 2xl:p-7 flex flex-col justify-between gap-8">
                                 <div>
-                                    <h2 className="text-white">500+</h2>
+                                    <h2 className="text-white">300+</h2>
                                     <p className="text-base text-white/70">Successful projects completed</p>
                                 </div>
                                 <div>
@@ -85,13 +85,13 @@ function Aboutus() {
                         </div>
                         <div className="relative overflow-hidden p-5 2xl:p-7 border border-secondary/12 dark:border-white/30 flex flex-col justify-between gap-8 md:gap-0">
                             <div className="relative z-10">
-                                <h2>238+</h2>
-                                <p>Brands served worldwide</p>
+                                <h2>250+</h2>
+                                <p>Customers served</p>
                             </div>
                             <div className="flex flex-col gap-4 relative z-10">
                                 <Image src={"/images/logo/logo-black.svg"} alt="Logo Image" height={44} width={160} className="dark:hidden"/>
                                 <Image src={"/images/logo/WhiteLogo.svg"} alt="Logo Image" height={44} width={160} className="hidden dark:block"/>
-                                <p>Our global reach allows us to create unique, culturally relevant designs for businesses across different industries.</p>
+                                <p>With clients we blend ancient Vedic wisdom with modern insights to deliver personalized astrology, Vastu, and tarot guidance tailored to your unique life path.</p>
                             </div>
                             <div className="absolute -top-72 right-0 border border-secondary/12 dark:border-white/30 rounded-full w-[489px] h-[489px]" />
                             <div className="absolute -bottom-36 -right-14 border border-secondary/12 dark:border-white/30 rounded-full w-[489px] h-[489px]" />

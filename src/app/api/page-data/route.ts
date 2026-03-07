@@ -68,7 +68,7 @@ const servicesData = {
         },
         {
             id: 4,
-            image: "/images/home/services/services_4.png",
+            image: "/images/home/services/services_4.jpeg",
             heading: "Palmistry",
             descp: "As they say, destiny is written in your hands. We will help you read it, understand it, amplify the good, and diminish the bad"
         },
@@ -217,11 +217,11 @@ const faqData = {
             faq_ans: 'Astrology is a system of cosmic time-keeping and energetic architecture. Just as the moon’s gravitational pull dictates the tides of the ocean, planetary geometries puts specific electromagnetic and archetypal pressures on human consciousness. A professional reading reveals the quality of time you are entering. It allows you to align your free will with cosmic currents, turning resistance into leverage.'
         },
         {
-            faq_que: "Why do I need all three: Astrology, Vastu, and Tarot together?",
+            faq_que: "Why combine Astrology, Vastu, and Tarot?",
             faq_ans: 'These three disciplines form a holistic "Triad of Fate": Astrology diagnoses the Time (When should I act?), Vastu diagnoses the Space (Where should I be, and is my environment supporting me?), Tarot diagnoses the Mind (What is my subconscious blocking or revealing right now?). We need all three of them.'
         },
         {
-            faq_que: "If my Astrology chart indicates a difficult period, is it set in stone?",
+            faq_que: "Can a difficult Astrology chart be changed?",
             faq_ans: 'Absolutely not. This is the difference between Fate (the hand you are dealt) and Destiny (how you play that hand). We use remedial measures (gemstones, mantras, charitable actions) and strategic planning to mitigate the intensity of the "heat," ensuring you use the crisis for transformation rather than destruction.'
         },
         {
@@ -229,7 +229,7 @@ const faqData = {
             faq_ans: 'Tarot operates on the principle of synchronicity, a concept coined by Carl Jung to describe "meaningful coincidences." When we shuffle and draw, we bypass the logical, defensive ego and access the intuitive data that you already possess but cannot articulate.  A master reader uses Tarot to diagnose the hidden psychological currents driving your situation.'
         },
         {
-            faq_que: "How can a physical remedy can impact my career or relationships?",
+            faq_que: "How do physical remedies affect career or relationships?",
             faq_ans: 'This is called frequency modulation. Human body and your home act as complex energy systems emitting and receiving signals. Gemstones function as amplifiers and Vastu Corrections work on resistance. Get an appointment to learn more about this!'
         }
     ]
