@@ -222,7 +222,7 @@ const faqData = {
         },
         {
             faq_que: "Can a difficult Astrology chart be changed?",
-            faq_ans: 'Absolutely not. This is the difference between Fate (the hand you are dealt) and Destiny (how you play that hand). We use remedial measures (gemstones, mantras, charitable actions) and strategic planning to mitigate the intensity of the "heat," ensuring you use the crisis for transformation rather than destruction.'
+            faq_ans: 'Absolutely yes. This is the difference between Fate (the hand you are dealt) and Destiny (how you play that hand). We use remedial measures (gemstones, mantras, charitable actions) and strategic planning to mitigate the intensity of the "heat," ensuring you use the crisis for transformation rather than destruction.'
         },
         {
             faq_que: "What are Tarot Cards?",
