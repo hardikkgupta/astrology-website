@@ -43,7 +43,7 @@ const statsFactData = {
 };
 
 const servicesData = {
-    number: '03',
+    number: '02',
     name: "Services",
     heading: "What we do",
     description: "Unlock and transform your life by understanding how celestial bodies influences your life",

@@ -26,7 +26,7 @@ function Aboutus() {
                     <div className="flex flex-col gap-5 2xl:gap-7 w-full 2xl:max-w-2xl 2xl:w-full">
                         <div className="flex items-center gap-4 md:gap-8">
                             <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full text-white">
-                                04
+                                03
                             </span>
                             <div className="h-px w-16 bg-secondary/12 dark:bg-white/12"/>
                             <p className="text-base font-medium text-white bg-secondary dark:bg-white/10 py-1.5 px-4 rounded-full">

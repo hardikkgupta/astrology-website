@@ -21,10 +21,10 @@ export default function Home() {
       <Services/>
       <Aboutus/>
       <Testimonial/>
-      <Team teamdataNumber="06"/>
+      <Team teamdataNumber="05"/>
       <Pricing/>
       <Faq/>
-      <Contact contactdataNumber="10"/>
+      <Contact contactdataNumber="07"/>
     </>
   );
 }
