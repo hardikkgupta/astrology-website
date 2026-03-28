@@ -79,20 +79,11 @@ const Contact = () => {
 
 
     return (
-        <section className="py-20 md:py-40 dark:bg-darkblack">
+        <section className="pt-10 pb-20 md:pt-24 md:pb-40 dark:bg-darkblack">
             <div className="container">
                 <div className="flex flex-col gap-8 md:gap-20">
-                    <div className="flex flex-col gap-14 xl:gap-24">
-                        <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                            <div className="flex items-center py-3 w-full max-w-xl">
-                                <p className="section-bedge py-1.5 px-4 rounded-full">Contact us</p>
-                            </div>
-                            <div className="flex flex-col gap-11">
-                                <div className="flex flex-col gap-5 ">
-                                    <h2 className="max-w-3xl">Get in touch</h2>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex flex-col gap-5">
+                        <h2 className="max-w-3xl">Get in touch</h2>
                     </div>
                     <div className="flex flex-col xl:flex xl:flex-row gap-15 xl:gap-48">
                         <div className="max-w-md flex flex-col gap-9 md:gap-16">

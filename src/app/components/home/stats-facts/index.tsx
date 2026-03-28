@@ -35,17 +35,13 @@ function StatsFacts() {
 
     return (
         <section className="relative bg-white dark:bg-secondary overflow-hidden">
-            <div className="relative py-20 md:py-40 z-10">
+            <div className="relative pt-10 pb-20 md:pt-24 md:pb-40 z-10">
                 <div className="container">
-                    <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                        <div className="flex items-center py-3 w-full max-w-xl">
-                            <p className="section-bedge py-1.5 px-4 rounded-full">{statsFactData && statsFactData?.name}</p>
+                    <div className="flex flex-col gap-11">
+                        <div className="flex flex-col gap-5">
+                            <h2 className="max-w-3xl">{statsFactData?.heading}</h2>
+                            <p className="max-w-xl text-secondary/70 dark:text-white/70">{statsFactData?.description}</p>
                         </div>
-                        <div className="flex flex-col gap-11">
-                            <div className="flex flex-col gap-5 ">
-                                <h2 className="max-w-3xl">{statsFactData?.heading}</h2>
-                                <p className="max-w-xl text-secondary/70 dark:text-white/70">{statsFactData?.description}</p>
-                            </div>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                 {statsFactData && statsFactData?.scoreData?.map((value: any, index: any) => {
                                     return (
@@ -66,7 +62,6 @@ function StatsFacts() {
                         </div>
                     </div>
                 </div>
-            </div>
             <div className="absolute -bottom-28 -left-20">
                 <Image src={"/images/home/statsfact/sectionbg.png"} alt="image" height={590} width={590} className="dark:hidden" />
                 <Image src={"/images/home/statsfact/sectionbgdark.png"} alt="image" height={590} width={590} className="hidden dark:block" />

@@ -21,20 +21,13 @@ function Testimonial() {
         }, [])
         
     return (
-        <section className="bg-lightgray dark:bg-secondary py-20 md:py-40">
+        <section className="bg-lightgray dark:bg-secondary pt-10 pb-20 md:pt-24 md:pb-40">
             <div className="flex flex-col gap-24">
                 <div className="container">
-                    <div className="flex flex-col gap-14 xl:gap-24">
-                        <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                            <div className="flex items-center py-3 w-full max-w-xl">
-                                <p className="section-bedge py-1.5 px-4 rounded-full">Testimonial</p>
-                            </div>
-                            <div className="flex flex-col gap-11">
-                                <div className="flex flex-col gap-5 ">
-                                    <h2 className="max-w-3xl">Stories from clients</h2>
-                                    <p className="max-w-2xl text-secondary/70 dark:text-white/70">Real journeys of people who found clarity and peace through the stars.</p>
-                                </div>
-                            </div>
+                    <div className="flex flex-col gap-14">
+                        <div className="flex flex-col gap-5">
+                            <h2 className="max-w-3xl">Stories from clients</h2>
+                            <p className="max-w-2xl text-secondary/70 dark:text-white/70">Real journeys of people who found clarity and peace through the stars.</p>
                         </div>
                         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-7">
                             <div className="bg-primary p-4 lg:p-7 flex flex-col gap-32">

@@ -20,15 +20,10 @@ function Aboutus() {
         }, [])
 
     return (
-        <section className="py-20 md:py-40 dark:bg-darkblack">
+        <section className="pt-10 pb-20 md:pt-24 md:pb-40 dark:bg-darkblack">
             <div className="container">
                 <div className="flex flex-col 2xl:flex-row gap-10 2xl:gap-28">
                     <div className="flex flex-col gap-5 2xl:gap-7 w-full 2xl:max-w-2xl 2xl:w-full">
-                        <div className="flex items-center">
-                            <p className="text-base font-medium text-white bg-secondary dark:bg-white/10 py-1.5 px-4 rounded-full">
-                                About us
-                            </p>
-                        </div>
                         <div className="flex flex-col gap-5 2xl:gap-7">
                             <h2 className="2xl:max-w-3xl text-secondary dark:text-white">Why choose us</h2>
                             <p className="2xl:max-w-sm text-secondary/70 dark:text-white/70">We blend ancient Vedic sciences with intuitive practice to offer clarity and direction. With a focus on precision, empathy, and real-world remedies that transform lives.</p>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 function Services() {
@@ -8,6 +8,7 @@ function Services() {
     const [imagePosition, setImagePosition] = useState<number>(0);
     const [isMdScreen, setIsMdScreen] = useState(false);
     const [servicesData, setServicesData] = useState<any>(null);
+    const serviceListRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const checkScreenSize = () => setIsMdScreen(window.innerWidth >= 768);
@@ -29,6 +30,22 @@ function Services() {
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
 
+    // Set initial image position to align with the first service item
+    useEffect(() => {
+        if (servicesData && serviceListRef.current) {
+            const firstItem = serviceListRef.current.querySelector('[data-service-item]') as HTMLElement;
+            if (firstItem) {
+                const container = firstItem.parentElement;
+                if (container) {
+                    const itemRect = firstItem.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+                    const topOffset = itemRect.top - containerRect.top + itemRect.height / 2;
+                    setImagePosition(topOffset);
+                }
+            }
+        }
+    }, [servicesData]);
+
     const handleMouseEnter = (index: number, event: React.MouseEvent<HTMLDivElement>) => {
         setActiveIndex(index);
 
@@ -48,25 +65,16 @@ function Services() {
 
 
     return (
-        <section id="services" className="bg-secondary py-20 md:py-40">
+        <section id="services" className="bg-secondary pt-10 pb-20 md:pt-24 md:pb-40">
             <div className="flex flex-col gap-24">
                 <div className="container">
-                    <div className="flex flex-col gap-24">
-                        <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                            <div className="flex items-center py-3 w-full max-w-xl">
-                                <p className="text-base font-medium text-secondary bg-white py-1.5 px-4 rounded-full">
-                                    {servicesData?.name}
-                                </p>
-                            </div>
-                            <div className="flex flex-col gap-11">
-                                <div className="flex flex-col gap-5">
-                                    <h2 className="max-w-3xl text-white">{servicesData?.heading}</h2>
-                                    <p className="max-w-2xl text-white/70">{servicesData?.description}</p>
-                                </div>
-                            </div>
+                    <div className="flex flex-col gap-14">
+                        <div className="flex flex-col gap-5">
+                            <h2 className="max-w-3xl text-white">{servicesData?.heading}</h2>
+                            <p className="max-w-2xl text-white/70">{servicesData?.description}</p>
                         </div>
 
-                        <div className="flex flex-col md:flex-row relative gap-10 2xl:gap-56">
+                        <div className="flex flex-col md:flex-row relative gap-10 2xl:gap-56 overflow-hidden">
                             <div className="relative w-full md:max-w-sm">
                                 <div
                                     className={`relative md:absolute md:right-0 xl:left-0 transition-all duration-300 z-10 h-80`}
@@ -85,10 +93,11 @@ function Services() {
                             </div>
 
                             <div className="w-full flex flex-col gap-16">
-                                <div>
+                                <div ref={serviceListRef}>
                                     {servicesData?.data.map((value: any, index: any) => (
                                         <div
                                             key={index}
+                                            data-service-item
                                             onMouseEnter={(e) => handleMouseEnter(index, e)}
                                             className="group py-6 xl:py-10 border-t border-white/12 cursor-pointer flex xl:flex-row flex-col xl:items-center items-start justify-between xl:gap-10 gap-1 relative">
                                             <h3 className="text-white group-hover:text-primary 2xl:w-full 2xl:max-w-sm py-1">
