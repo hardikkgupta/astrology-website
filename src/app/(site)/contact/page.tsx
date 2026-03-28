@@ -12,7 +12,7 @@ export default function Page() {
                 bannerimage="/images/contact/banner/contact-banner.png"
                 heading="Contact"
                 desc="Ready to <span>change</span> your future? Reach out to us we’d love to hear from you." />
-            <Contact contactdataNumber="01"/>
+            <Contact/>
         </main>
     );
 };
