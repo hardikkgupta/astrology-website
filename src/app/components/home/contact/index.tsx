@@ -4,8 +4,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Contact = (props: { contactdataNumber: string }) => {
-    const { contactdataNumber } = props;
+const Contact = () => {
     const [submitted, setSubmitted] = useState(false);
     const [loader, setLoader] = useState(false);
     const [contactData, setContactData] = useState<any>(null);
@@ -85,9 +84,7 @@ const Contact = (props: { contactdataNumber: string }) => {
                 <div className="flex flex-col gap-8 md:gap-20">
                     <div className="flex flex-col gap-14 xl:gap-24">
                         <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                            <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                                <span className="bg-primary text-white py-1.5 px-2.5 text-base font-medium rounded-full">{contactdataNumber ? contactdataNumber : 10}</span>
-                                <div className="h-px w-16 bg-black/12 dark:bg-white/12" />
+                            <div className="flex items-center py-3 w-full max-w-xl">
                                 <p className="section-bedge py-1.5 px-4 rounded-full">Contact us</p>
                             </div>
                             <div className="flex flex-col gap-11">

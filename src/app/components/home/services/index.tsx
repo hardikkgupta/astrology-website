@@ -53,11 +53,7 @@ function Services() {
                 <div className="container">
                     <div className="flex flex-col gap-24">
                         <div className="flex flex-col xl:flex xl:flex-row items-start gap-8">
-                            <div className="flex items-center py-3 gap-4 md:gap-8 w-full max-w-xl">
-                                <span className="bg-primary py-1.5 px-2.5 text-base font-medium rounded-full text-white">
-                                    {servicesData?.number}
-                                </span>
-                                <div className="h-px w-16 bg-white/12" />
+                            <div className="flex items-center py-3 w-full max-w-xl">
                                 <p className="text-base font-medium text-secondary bg-white py-1.5 px-4 rounded-full">
                                     {servicesData?.name}
                                 </p>
